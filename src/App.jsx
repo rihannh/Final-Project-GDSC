@@ -1,27 +1,22 @@
-import Hero from './components/Hero';
-import Partner from './components/Partner';
-import Review from './components/Review';
-import Navbar from './components/Navbar';
-import OurService from './components/OurService';
-import Recipes from './components/Recipes';
-import Nutritions from './components/Nutritions';
-import BMICalculator from './components/BMICalculator'
-import CTA from './components/CTA';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from "./pages/Home"
+import Recipe from './pages/Recipe'
+import Nutrition from './pages/Nutrition'
+import BMICheck from './pages/BMICheck'
+import Contact from './pages/Contact'
+
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Partner />
-      <OurService />
-      <Recipes />
-      <Nutritions />
-      <BMICalculator />
-      <Review />
-      <CTA />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/recipe' element={<Recipe />} />
+        <Route path='/nutrition' element={<Nutrition />} />
+        <Route path='/bmi-check' element={<BMICheck />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='*' element={<Home />} />
+      </Routes>
+    </Router>
   )
 }
 

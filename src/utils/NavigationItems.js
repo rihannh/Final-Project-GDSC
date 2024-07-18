@@ -1,22 +1,22 @@
 export const NavigationItems = [
     {
         name: "Home",
-        link: "/",
+        link: "/home",
     },
     {
         name: "Resep Makanan",
-        link: "/",
+        link: "/recipe",
     },
     {
         name: "Informasi Nutrisi",
-        link: "/",
+        link: "/nutrition",
     },
     {
         name: "BMI Check",
-        link: "/",
+        link: "/bmi-check",
     },
     {
         name: "Kontak",
-        link: "/",
+        link: "/contact",
     },
 ];
