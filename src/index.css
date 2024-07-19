@@ -17,3 +17,32 @@
 body {
      background-color: #f2f9ff;
 }
+
+/* Tambahkan di file CSS global atau di Tailwind configuration */
+.pagination {
+     display: flex;
+     justify-content: center;
+     padding: 20px;
+}
+
+.page-item {
+     margin: 0 5px;
+}
+
+.page-link {
+     display: inline-block;
+     padding: 10px 15px;
+     border: 1px solid #ddd;
+     border-radius: 4px;
+     text-decoration: none;
+     color: #007bff;
+}
+
+.page-link:hover {
+     background-color: #f1f1f1;
+}
+
+.active .page-link {
+     background-color: #007bff;
+     color: white;
+}
