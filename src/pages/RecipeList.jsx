@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import fetchKetoDietData from '../utils/recipes';
 import debounce from 'lodash.debounce';
 import ReactPaginate from 'react-paginate';
+import { Link } from 'react-router-dom'
 
-const ITEMS_PER_PAGE = 10; // Jumlah item per halaman
+const ITEMS_PER_PAGE = 12; // Jumlah item per halaman
 
 export default function RecipeList() {
   const [query, setQuery] = useState('');
@@ -53,27 +54,46 @@ export default function RecipeList() {
   return (
     <>
       <Navbar />
-      <div className="mt-32">
+      <div className="container mt-32">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search for a recipe..."
-          className="p-2 border border-gray-300 rounded"
+          className="p-2 w-full border border-gray-300 rounded"
         />
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error}</p>}
-        <ul className="flex flex-wrap space-y-4 mt-4">
+        <ul className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mt-4">
           {pagedRecipes.map((recipe) => (
-            <li key={recipe.id} className="p-4 border rounded shadow">
-              <h2 className="text-xl font-bold mb-2">{recipe.recipe}</h2>
-              <img src={recipe.image} alt={recipe.recipe} className="w-52 h-auto mb-2 rounded" />
-              <p><strong>Category:</strong> {recipe.category.category}</p>
-              <p><strong>Preparation Time:</strong> {recipe.prep_time_in_minutes} minutes</p>
-              <p><strong>Cooking Time:</strong> {recipe.cook_time_in_minutes} minutes</p>
-              <p><strong>Difficulty:</strong> {recipe.difficulty}</p>
-              <p><strong>Serving:</strong> {recipe.serving}</p>
-            </li>
+            <Link key={recipe.id} to='/'>
+              <li className="border rounded-lg shadow overflow-hidden h-full">
+                <figure className="h-48 overflow-hidden">
+                  <img src={recipe.image} alt={recipe.recipe} className="w-full h-full object-cover" />
+                </figure>
+                <div className="flex flex-col pt-6 pb-4 px-2 gap-4">
+                  <div className="">
+                    <h2 className="text-center font-semibold text-lg text-slate-800">{recipe.recipe}</h2>
+                    <h3 className="text-center text-base text-slate-700">{recipe.category.category}</h3>
+                  </div>
+                  <div className="grid grid-cols-3 pt-4 text-center h-full">
+                    <div className=" flex items-center flex-col">
+                      <p className="text-sm text-slate-500">{recipe.difficulty}</p>
+                      <p className="text-sm font-semibold text-cyan-500">Difficulty</p>
+                    </div>
+                    <div className="flex items-center flex-col">
+                      <p className="text-sm text-slate-500">{recipe.cook_time_in_minutes} m</p>
+                      <p className="text-sm font-semibold text-cyan-500">Cooking Time</p>
+                    </div>
+                    <div className="flex items-center flex-col">
+                      <p className="text-sm text-slate-500">{recipe.calories}</p>
+                      <p className="text-sm font-semibold text-cyan-500">Calories</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </Link>
+
           ))}
         </ul>
         {pageCount > 1 && (

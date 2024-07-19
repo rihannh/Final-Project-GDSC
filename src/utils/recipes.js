@@ -4,9 +4,9 @@ const fetchKetoDietData = async (query) => {
     const options = {
         method: 'GET',
         url: 'https://keto-diet.p.rapidapi.com/',
-        params: query? { search: query }: {},
+        params: query ? { search: query } : {},
         headers: {
-            'x-rapidapi-key': 'a78153e874msh19c3c5930d54315p14b4f1jsne5e0984f317a',
+            'x-rapidapi-key': 'a9014de3famshadb6a8af64b1056p1d4a22jsnb8c4d3819a98',
             'x-rapidapi-host': 'keto-diet.p.rapidapi.com'
         }
     };
