@@ -66,7 +66,7 @@ export default function RecipeList() {
         {error && <p>Error: {error}</p>}
         <ul className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mt-4">
           {pagedRecipes.map((recipe) => (
-            <Link key={recipe.id} to='/'>
+            <Link key={recipe.id} to={`/recipe/${recipe.id}`}>
               <li className="border rounded-lg shadow overflow-hidden h-full">
                 <figure className="h-48 overflow-hidden">
                   <img src={recipe.image} alt={recipe.recipe} className="w-full h-full object-cover" />
