@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
-import fetchKetoDietData from '../utils/recipes';
+import fetchKetoDietData from '../utils/DataKetoDiet';
 // import debounce from 'lodash.debounce';
 import ReactPaginate from 'react-paginate';
 import { Link } from 'react-router-dom'
@@ -95,7 +95,7 @@ export default function RecipeList() {
 
           ))}
         </ul>
-  
+
         {pageCount > 1 && (
           <ReactPaginate
             previousLabel={"Previous"}

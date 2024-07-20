@@ -12,7 +12,7 @@ export default function Hero() {
                     <div className=" flex flex-col justify-center gap-6">
                         <h1 className='font-bold text-cyan-500 text-3xl md:text-5xl'>Temukan Gaya Hidup Sehat yang Baru dengan Halsa</h1>
                         <p className='text-base text-slate-500 md:text-lg'>Dapatkan panduan komprehensif dari para ahli kesehatan, serta resep dan informasi nutrisi untuk membantu Anda menjalani hidup lebih sehat</p>
-                        <button className='w-fit py-3 px-8 bg-cyan-500 text-white rounded-full text-base lg:text-xl font-medium'>Jelajahi Sekarang</button>
+                        <button className='w-fit py-3 px-8 bg-cyan-500 text-white rounded-full text-base lg:text-xl font-medium'><a href="#service">Jelajahi Sekarang</a></button>
                         <div className="flex gap-12 mt-4">
                             <NumberTickerDemo valueNum={550} desc='Food Recipes' />
                             <NumberTickerDemo valueNum={10000} desc='Food Nutrients' />

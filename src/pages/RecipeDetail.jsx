@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import fetchKetoDietData from '../utils/recipes';
+import fetchKetoDietData from '../utils/DataKetoDiet';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
