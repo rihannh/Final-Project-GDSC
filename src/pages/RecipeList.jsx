@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import fetchKetoDietData from '../utils/recipes';
-import debounce from 'lodash.debounce';
+// import debounce from 'lodash.debounce';
 import ReactPaginate from 'react-paginate';
 import { Link } from 'react-router-dom'
 
@@ -49,18 +49,17 @@ export default function RecipeList() {
     setPagedRecipes(recipes.slice(offset, offset + ITEMS_PER_PAGE));
   }, [currentPage, recipes]);
 
-  const debouncedSearch = debounce(handleSearch, 1000);
-
   return (
     <>
       <Navbar />
-      <div className="container mt-32">
+      <div className="container mt-24 md:mt-32 mb-24">
+        <h1 className="text-3xl md:text-5xl text-slate-800 font-bold text-center mb-8 md:mb-12">Healthy Food Recipes</h1>
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search for a recipe..."
-          className="p-2 w-full border border-gray-300 rounded"
+          className="p-2 w-full border border-gray-300 rounded-lg mb-4 md:mb-6"
         />
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error}</p>}
@@ -96,6 +95,7 @@ export default function RecipeList() {
 
           ))}
         </ul>
+  
         {pageCount > 1 && (
           <ReactPaginate
             previousLabel={"Previous"}

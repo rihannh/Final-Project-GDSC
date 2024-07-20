@@ -63,10 +63,10 @@ const RecipeDetail = () => {
                     <figure className='md:w-1/2 rounded-lg overflow-hidden'>
                         <img src={recipe.image} alt={recipe.recipe} className="w-full h-full object-cover" />
                     </figure>
-                    <div className="">
-                        <h1 className="text-3xl lg:text-5xl font-bold">{recipe.recipe}</h1>
+                    <div className="md:w-1/2">
+                        <h1 className="text-3xl md:text-5xl font-bold">{recipe.recipe}</h1>
                         <p className='text-lg lg:text-xl text-cyan-500 mb-5'>{recipe.category.category}</p>
-                        <div className="space-y-2 text-base lg:text-lg">
+                        <div className="space-y-2 text-base md:text-lg">
                             <div className="grid grid-cols-2 gap-6">
                                 <p className='text-slate-600 font-medium'>Difficulty</p>
                                 <p>: {recipe.difficulty}</p>
@@ -101,7 +101,7 @@ const RecipeDetail = () => {
                 <div className="grid md:grid-cols-2 space-y-8 md:space-y-0 mt-12">
                     <div>
                         <h2 className="text-2xl text-cyan-500 font-semibold">Ingredients</h2>
-                        <ul className="list-disc pl-6 mt-2">
+                        <ul className="list-disc pl-6 mt-2 text-base md:text-lg">
                             {recipe.ingredients.map((ingredient, index) => (
                                 <li key={index}>
                                     {ingredient.measurement ? `${ingredient.measurement} ` : ''}{ingredient.ingredient}
@@ -111,7 +111,7 @@ const RecipeDetail = () => {
                     </div>
                     <div>
                         <h2 className="text-2xl text-cyan-500 font-semibold">Steps</h2>
-                        <ol className="list-decimal pl-6 mt-2">
+                        <ol className="list-decimal pl-6 mt-2 text-base md:text-lg">
                             {recipe.steps.map((step, index) => (
                                 <li key={index}>{step}</li>
                             ))}

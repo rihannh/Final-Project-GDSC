@@ -2,7 +2,7 @@
 import { RiMenu3Fill } from "react-icons/ri";
 import { useState, useEffect } from "react";
 import { NavigationItems } from '../utils/NavigationItems'
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
     const [isNavVisible, setNavVisible] = useState(false);
@@ -45,7 +45,7 @@ const Navbar = () => {
                             <ul className="block lg:flex  gap-x-14">
                                 {NavigationItems && Array.isArray(NavigationItems) && NavigationItems.map((item) => (
                                     <Link key={item.name} to={item.link}>
-                                        <li className={`${item.name == 'Home' ? 'text-cyan-500' : 'text-slate-500'} text-base font-medium py-2 px-8 lg:px-0 hover:text-cyan-500 duration-300 cursor-pointer`}>
+                                        <li className={`${location.pathname === item.link ? 'text-cyan-500' : 'text-slate-500'} text-base font-medium py-2 px-8 lg:px-0 hover:text-cyan-500 duration-300 cursor-pointer`}>
                                             {item.name}
                                         </li>
                                     </Link>

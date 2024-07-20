@@ -35,7 +35,7 @@ body {
      border: 1px solid #ddd;
      border-radius: 4px;
      text-decoration: none;
-     color: #007bff;
+     color: #06b6d4;
 }
 
 .page-link:hover {
@@ -43,6 +43,6 @@ body {
 }
 
 .active .page-link {
-     background-color: #007bff;
+     background-color: #06b6d4;
      color: white;
 }
