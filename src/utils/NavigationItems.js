@@ -1,7 +1,7 @@
 export const NavigationItems = [
     {
         name: "Home",
-        link: "/home",
+        link: "/",
     },
     {
         name: "Resep Makanan",

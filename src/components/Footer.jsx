@@ -18,8 +18,11 @@ export default function Footer() {
                         <div className="flex flex-wrap gap-20">
                             <div className="space-y-3">
                                 <h3 className="text-xl font-semibold pb-2 text-slate-700">Tentang</h3>
-                                <p className="text-base lg:text-lg text-slate-500 hover:text-cyan-500 duration-300"><Link to='/#hero'>Tentang Kami</Link></p>
-                                <p className="text-base lg:text-lg text-slate-500 hover:text-cyan-500 duration-300"><Link to='/#service'>Layanan</Link></p>
+                                {location.pathname === '/' && (
+                                    <>
+                                        <p className="text-base lg:text-lg text-slate-500 hover:text-cyan-500 duration-300"><a href='/#hero'>Tentang Kami</a></p>
+                                        <p className="text-base lg:text-lg text-slate-500 hover:text-cyan-500 duration-300"><a href='/#service'>Layanan</a></p>
+                                    </>)}
                                 <p className="text-base lg:text-lg text-slate-500 hover:text-cyan-500 duration-300"><Link to='/contact'>Kontak</Link></p>
                             </div>
                             <div className="space-y-3">
