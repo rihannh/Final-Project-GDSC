@@ -72,7 +72,7 @@ const BMICheck = () => {
             <form onSubmit={calculateBMI} className="space-y-4">
               <div className="grid grid-cols-2 gap-8">
                 <div className="flex flex-col">
-                  <label htmlFor="gender" className="text-lg font-medium">Gender:</label>
+                  <label htmlFor="gender" className="text-lg font-medium">Jenis Kelamin:</label>
                   <select
                     id="gender"
                     value={gender}
@@ -80,13 +80,13 @@ const BMICheck = () => {
                     className="p-2 border border-gray-300 rounded-lg"
                     required
                   >
-                    <option value="">Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+                    <option value="">Pilih Jenis Kelamin</option>
+                    <option value="male">Laki - Laki</option>
+                    <option value="female">Perempuan</option>
                   </select>
                 </div>
                 <div className="flex flex-col">
-                  <label htmlFor="age" className="text-lg font-medium">Age:</label>
+                  <label htmlFor="age" className="text-lg font-medium">Umur</label>
                   <input
                     type="number"
                     id="age"
@@ -99,7 +99,7 @@ const BMICheck = () => {
               </div>
               <div className="grid grid-cols-2 gap-8">
                 <div className="flex flex-col">
-                  <label htmlFor="height" className="text-lg font-medium">Height (cm):</label>
+                  <label htmlFor="height" className="text-lg font-medium">Tinggi Badan (cm):</label>
                   <input
                     type="number"
                     id="height"
@@ -110,7 +110,7 @@ const BMICheck = () => {
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="weight" className="text-lg font-medium">Weight (kg):</label>
+                  <label htmlFor="weight" className="text-lg font-medium">Berat Badan (kg):</label>
                   <input
                     type="number"
                     id="weight"
@@ -125,7 +125,7 @@ const BMICheck = () => {
                 type="submit"
                 className="text-white md:text-lg bg-cyan-500 py-2 px-6 md:py-2  md:px-6 rounded-full hover:opacity-80 hover:scale-95 duration-300"
               >
-                Calculate BMI
+                Hitung BMI
               </button>
             </form>
 

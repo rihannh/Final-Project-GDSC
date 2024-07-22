@@ -53,12 +53,12 @@ export default function RecipeList() {
     <>
       <Navbar />
       <div className="container mt-24 md:mt-32 mb-24">
-        <h1 className="text-3xl md:text-5xl text-slate-800 font-bold text-center mb-8 md:mb-12">Healthy Food Recipes</h1>
+        <h1 className="text-3xl md:text-5xl text-slate-800 font-bold text-center mb-8 md:mb-12">Resep Makanan Sehat dan Lezat</h1>
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search for a recipe..."
+          placeholder="Cari resep makanan..."
           className="p-2 w-full border border-gray-300 rounded-lg mb-4 md:mb-6"
         />
         {loading && <p>Loading...</p>}
