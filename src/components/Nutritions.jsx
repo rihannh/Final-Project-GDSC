@@ -1,4 +1,3 @@
-import nutritionPicture from '../assets/nutrition2.jpg'
 import { Link } from 'react-router-dom'
 
 export default function Nutritions() {
@@ -7,7 +6,7 @@ export default function Nutritions() {
             <div className="container">
                 <div className="flex flex-col lg:flex-row-reverse lg:items-center gap-8 lg:gap-16">
                     <figure className='rounded-2xl w-full md:h-[320px] lg:w-[750px] lg:h-[400px] overflow-hidden'>
-                        <img src={nutritionPicture} alt="Healthy Food" className='w-full h-full object-cover' />
+                        <img src="/nutrition2.jpg" alt="Healthy Food" className='w-full h-full object-cover' />
                     </figure>
                     <div className="lg:w-2/3">
                         <p className='text-lg text-cyan-500 mb-3'>Informasi Nutrisi Makanan</p>

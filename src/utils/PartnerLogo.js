@@ -1,29 +1,23 @@
-import Kemenkes from '../assets/logo-kemenkes.png';
-import RSCM from '../assets/logo-RSCM.png';
-import IDI from '../assets/logo-IDI.png';
-import Alodokter from '../assets/logo-alodokter.png';
-import k24 from '../assets/logo-k24.png';
-
 export const PartnerLogo = [
     {
         name: 'Logo Kementrian Kesehatan Republik Indonesia',
-        logo: Kemenkes
+        logo: '/logo-kemenkes.png'
     },
     {
         name: 'Logo Rumah Sakit Citra Medika',
-        logo: RSCM
+        logo: '/logo-RSCM.png'
     },
     {
         name: 'Logo Ikatan Dokter Indonesia',
-        logo: IDI
+        logo: '/logo-IDI.png'
     },
     {
         name: 'Logo Alodokter',
-        logo: Alodokter
+        logo: '/logo-alodokter.png'
     },
     {
         name: 'Logo Apotek K24',
-        logo: k24
+        logo: '/logo-k24.png'
     }
 ];
 

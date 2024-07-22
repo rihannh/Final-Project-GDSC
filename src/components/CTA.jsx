@@ -1,8 +1,6 @@
 import Meteors from "./magicui/Meteors"
 import ShineBorder from "./magicui/ShineBorder"
-import CtaBackground from '../assets/gym.jpg'
 import { Link } from 'react-router-dom'
-import Contact from "../pages/Contact"
 
 export default function CTA() {
     return (
@@ -10,7 +8,7 @@ export default function CTA() {
             <div className="container">
                 <ShineBorder className="flex relative overflow-hidden flex-col lg:text-center justify-between items-center bg-slate-900 rounded-xl p-8 lg:p-16 gap-8" color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}>
                     <Meteors number={30} />
-                    <img src={CtaBackground} alt="Gym" className="absolute -z-0 top-0 opacity-[3%]" />
+                    <img src="/gym.jpg" alt="Gym" className="absolute -z-0 top-0 opacity-[3%]" />
                     <div className="lg:w-3/5 space-y-3 z-10">
                         <h3 className='text-xl md:text-3xl font-semibold text-white'>Mulai Gaya Hidup Sehat Anda Hari Ini!</h3>
                         <p className='text-base md:text-lg text-white'>Halsa adalah sumber lengkap untuk membantu Anda mencapai tujuan kesehatan Anda. Dapatkan akses ke ribuan resep lezat dan sehat, informasi nutrisi yang akurat, dan komunitas yang suportif.</p>

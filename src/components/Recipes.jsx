@@ -1,12 +1,11 @@
 import { Link } from 'react-router-dom'
-import recipePicture from '../assets/recipe.jpg'
 export default function Recipes() {
     return (
         <section id="recipe" className="mt-24">
             <div className="container">
                 <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-16">
                     <figure className='rounded-2xl w-full md:h-[320px] lg:w-[750px] lg:h-[400px] overflow-hidden'>
-                        <img src={recipePicture} alt="" className='w-full h-full object-cover' />
+                        <img src="/recipe.jpg" alt="" className='w-full h-full object-cover' />
                     </figure>
                     <div className="lg:w-2/3">
                         <p className='text-lg text-cyan-500 mb-3'>Resep Makanan Sehat dan Lezat</p>

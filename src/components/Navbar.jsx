@@ -2,7 +2,7 @@
 import { RiMenu3Fill } from "react-icons/ri";
 import { useState, useEffect } from "react";
 import { NavigationItems } from '../utils/NavigationItems'
-import { Link, useLocation } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const Navbar = () => {
     const [isNavVisible, setNavVisible] = useState(false);
