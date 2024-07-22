@@ -34,7 +34,7 @@ const Navbar = () => {
         <header className={`bg-transparent absolute top-0 left-0 w-full flex items-center z-50 ${isNavbarFixed ? 'navbar-fixed' : ''}`}>
             <div className="container py-4 lg:py-0">
                 <div className="flex items-center justify-between relative">
-                    <img src="../../public/vite.svg" alt="logo" className="h-12" />
+                    <img src="/vite.svg" alt="logo" className="h-12" />
                     <div className="flex items-center">
                         <button id="mobile-nav" className="block absolute top-1/2 -translate-y-1/2 right-4 lg:hidden" onClick={toggleNavVisibility}>
                             <RiMenu3Fill size={30} className="text-slate-500" />
