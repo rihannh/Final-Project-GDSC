@@ -61,7 +61,37 @@ export default function RecipeList() {
           placeholder="Cari resep makanan..."
           className="p-2 w-full border border-gray-300 rounded-lg mb-4 md:mb-6"
         />
-        {loading && <p>Loading...</p>}
+        {loading && <>
+          <ul className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mt-4">
+            {Array.from({ length: 12 }).map((_, index) => (
+              <li key={index} className="border rounded-lg shadow overflow-hidden h-full animate-pulse">
+                <figure className="h-48 overflow-hidden">
+                  <div className="w-full h-full bg-gray-200"></div>
+                </figure>
+                <div className="flex flex-col pt-6 pb-4 px-2 gap-4">
+                  <div className="">
+                    <div className="h-6 bg-gray-200 rounded w-1/2 self-center"></div>
+                    <div className="h-4 bg-gray-200 rounded w-2/3 self-center mt-2"></div>
+                  </div>
+                  <div className="grid grid-cols-3 pt-4 text-center h-full">
+                    <div className="flex items-center flex-col">
+                      <div className="h-4 bg-gray-200 rounded w-full"></div>
+                      <div className="h-4 bg-gray-200 rounded w-full mt-2"></div>
+                    </div>
+                    <div className="flex items-center flex-col">
+                      <div className="h-4 bg-gray-200 rounded w-full"></div>
+                      <div className="h-4 bg-gray-200 rounded w-full mt-2"></div>
+                    </div>
+                    <div className="flex items-center flex-col">
+                      <div className="h-4 bg-gray-200 rounded w-full"></div>
+                      <div className="h-4 bg-gray-200 rounded w-full mt-2"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </>}
         {error && <p>Error: {error}</p>}
         <ul className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mt-4">
           {pagedRecipes.map((recipe) => (
