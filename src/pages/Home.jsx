@@ -9,18 +9,18 @@ import BMICalculator from '../components/BMICalculator'
 import CTA from '../components/CTA';
 import Footer from '../components/Footer';
 export default function Home() {
-    return (
-        <>
-            <Navbar />
-            <Hero />
-            <Partner />
-            <OurService />
-            <Recipes />
-            <Nutritions />
-            <BMICalculator />
-            <Review />
-            <CTA />
-            <Footer />
-        </>
-    )
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <Partner />
+      <OurService />
+      <Recipes />
+      <Nutritions />
+      <BMICalculator />
+      <Review />
+      <CTA />
+      <Footer />
+    </>
+  )
 }
